@@ -191,29 +191,6 @@
       filter: drop-shadow(0 18px 44px rgba(105,183,255,.22));
     }
 
-    .flag-group {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: 10px;
-      flex-shrink: 0;
-    }
-
-    .flag {
-      width: 34px;
-      height: 24px;
-      object-fit: cover;
-      border-radius: 6px;
-      border: 1px solid rgba(255,255,255,0.18);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.22);
-      transition: transform .25s var(--ease), box-shadow .25s var(--ease);
-    }
-
-    .flag:hover {
-      transform: translateY(-2px) scale(1.06);
-      box-shadow: 0 12px 26px rgba(0,0,0,0.3);
-    }
-
     .nav-toggle {
       display: none;
       border: 1px solid var(--line);
@@ -1003,16 +980,6 @@
         width: 170px;
       }
 
-      .flag-group {
-        gap: 8px;
-        margin-left: 6px;
-      }
-
-      .flag {
-        width: 30px;
-        height: 21px;
-      }
-
       .hero-grid,
       .panel-inner {
         padding: 24px;
@@ -1059,19 +1026,6 @@
       <nav>
         <a class="brand" href="#home" aria-label="G&C Welfare And Accountancy Services Ltd home">
           <img src="logo.png" alt="G&C Welfare and Accountancy Services logo" class="brand-logo" />
-
-          <div class="flag-group" aria-label="Supported languages">
-            <img
-              src="https://flagcdn.com/w40/gb.png"
-              alt="UK flag"
-              class="flag"
-            />
-            <img
-              src="https://flagcdn.com/w40/ro.png"
-              alt="Romania flag"
-              class="flag"
-            />
-          </div>
         </a>
 
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
