@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G&C Welfare And Accountancy Services Ltd</title>
+  <meta
+    name="description"
+    content="Trusted welfare advice, accountancy support, forms assistance and consultations in London for individuals, families and businesses."
+  />
+  <style>
+    :root {
+      --bg: #f5f8fc;
+      --surface: #ffffff;
+      --surface-soft: #f8fbff;
+      --text: #142033;
+      --muted: #607086;
+      --line: #d9e4f0;
+      --primary: #0f4c81;
+      --primary-dark: #0a3558;
+      --accent: #d9232e;
+      --accent-dark: #b71922;
+      --gold: #d9a400;
+      --success: #1e9e62;
+      --shadow-sm: 0 10px 25px rgba(20, 32, 51, 0.06);
+      --shadow-md: 0 18px 45px rgba(20, 32, 51, 0.10);
+      --shadow-lg: 0 28px 70px rgba(8, 29, 52, 0.16);
+      --radius: 20px;
+      --radius-sm: 14px;
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(15, 76, 129, 0.06), transparent 28%),
+        linear-gradient(180deg, #fbfdff 0%, var(--bg) 100%);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+      color: rgba(255,255,255,0.92);
+      font-size: 0.92rem;
+    }
+
+    .topbar-inner {
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 8px 0;
+    }
+
+    .topbar a {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(15, 76, 129, 0.08);
+    }
+
+    nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 210px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 14px;
+      font: inherit;
+      font-weight: 700;
+      color: var(--primary-dark);
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.96rem;
+      font-weight: 700;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--primary);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: #fff !important;
+      box-shadow: 0 12px 24px rgba(217, 35, 46, 0.18);
+    }
+
+    .nav-cta::after {
+      display: none;
+    }
+
+    .hero {
+      padding: 44px 0 72px;
+    }
+
+    .hero-shell {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, rgba(9, 44, 74, 0.98), rgba(15, 76, 129, 0.96));
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(255,255,255,0.10), transparent 24%),
+        radial-gradient(circle at 86% 16%, rgba(217, 35, 46, 0.18), transparent 22%),
+        radial-gradient(circle at 78% 82%, rgba(217, 164, 0, 0.12), transparent 18%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      align-items: center;
+      padding: 52px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      color: #fff;
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+      max-width: 10ch;
+    }
+
+    .hero-copy p {
+      margin: 0 0 24px;
+      color: rgba(255,255,255,0.86);
+      font-size: 1.06rem;
+      max-width: 640px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 18px;
+      border-radius: 12px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: var(--primary-dark);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+    }
+
+    .btn-secondary {
+      color: #fff;
+      border-color: rgba(255,255,255,0.24);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-whatsapp {
+      color: #fff;
+      background: linear-gradient(135deg, var(--success), #17784a);
+      box-shadow: 0 12px 24px rgba(23, 120, 74, 0.22);
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .hero-point {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 16px;
+      padding: 18px;
+      color: #fff;
+    }
+
+    .hero-point strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .hero-point span {
+      display: block;
+      color: rgba(255,255,255,0.78);
+      font-size: 0.92rem;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero-logo-card,
+    .hero-info-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 24px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-logo-card {
+      text-align: center;
+    }
+
+    .hero-logo-card img {
+      max-width: 100%;
+      max-height: 180px;
+      width: auto;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+
+    .hero-info-card h3,
+    .hero-info-card p {
+      margin: 0;
+      color: #fff;
+    }
+
+    .hero-info-card h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-info-card p {
+      color: rgba(255,255,255,0.82);
+      font-size: 0.96rem;
+    }
+
+    section {
+      padding: 26px 0 74px;
+      position: relative;
+    }
+
+    .section-bg {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.90), rgba(246, 249, 253, 0.93)),
+        url("section-bg.jfif") center/cover no-repeat;
+      filter: saturate(0.88) blur(1px);
+      transform: scale(1.03);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .section-bg > .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.85rem, 3vw, 2.7rem);
+      letter-spacing: -0.02em;
+    }
+
+    .section-head p {
+      margin: 0 auto;
+      max-width: 760px;
+      color: var(--muted);
+    }
+
+    .panel {
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(15, 76, 129, 0.08);
+      border-radius: 24px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      backdrop-filter: blur(4px);
+    }
+
+    .panel-inner {
+      padding: 34px;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+    .card {
+      background: rgba(255,255,255,0.94);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      height: 100%;
+      box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(4px);
+    }
+
+    .card h3,
+    .card h4 {
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 10px 20px rgba(15, 76, 129, 0.18);
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .trust-item {
+      background: linear-gradient(180deg, #f8fbff, #eef5fc);
+      border: 1px solid #dbe7f3;
+      border-radius: 16px;
+      padding: 16px 18px;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .details-list {
+      display: grid;
+      gap: 0;
+    }
+
+    .detail-row {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .detail-row:last-child {
+      border-bottom: 0;
+    }
+
+    .detail-row strong {
+      color: var(--text);
+    }
+
+    .detail-row span,
+    .detail-row a {
+      color: var(--muted);
+    }
+
+    .location-box {
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-md);
+      background: #fff;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 420px;
+      border: 0;
+    }
+
+    .location-note {
+      padding: 20px 22px;
+      color: var(--muted);
+      background: #fff;
+    }
+
+    .contact-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,251,255,0.96) 100%);
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px 14px;
+      border-radius: 12px;
+      border: 1px solid #cddbeb;
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: 0;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.10);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    footer {
+      padding: 20px 0 40px;
+    }
+
+    .footer-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 60;
+      background: linear-gradient(135deg, var(--success), #17784a);
+      color: #fff;
+      border-radius: 999px;
+      padding: 14px 18px;
+      font-weight: 800;
+      box-shadow: 0 16px 34px rgba(23, 120, 74, 0.24);
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-points,
+      .grid-4,
+      .grid-3,
+      .trust-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 780px) {
+      .topbar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        padding: 12px 0;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 10px 0 4px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .brand-logo {
+        width: 170px;
+      }
+
+      .hero-grid,
+      .panel-inner {
+        padding: 24px;
+      }
+
+      .grid-2,
+      .grid-3,
+      .grid-4,
+      .hero-points,
+      .trust-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      iframe {
+        height: 320px;
+      }
+
+      .whatsapp-float span {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div>Trusted welfare and accountancy support in London</div>
+      <div>
+        <a href="tel:+447404907088">+44 7404 907088</a> ·
+        <a href="mailto:office@gcwelfareadvice.co.uk">office@gcwelfareadvice.co.uk</a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#home" aria-label="G&C Welfare And Accountancy Services Ltd home">
+          <img src="logo.png" alt="G&C Welfare and Accountancy Services logo" class="brand-logo" />
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          Menu
+        </button>
+
+        <div class="nav-links" id="site-menu">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#company">Company</a>
+          <a href="#location">Location</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact" class="nav-cta">Book Consultation</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-shell">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="eyebrow">Professional support in London</div>
+              <h1>Reliable welfare advice and accountancy services</h1>
+              <p>
+                G&C Welfare And Accountancy Services Ltd offers practical support for
+                welfare advice, accountancy services, forms, documentation and consultations
+                for individuals, families and businesses.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Book a consultation</a>
+                <a href="#services" class="btn btn-secondary">View our services</a>
+                <a href="https://wa.me/447404907088" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp us</a>
+              </div>
+
+              <div class="hero-points">
+                <div class="hero-point">
+                  <strong>Welfare Support</strong>
+                  <span>Practical help and clear guidance for clients.</span>
+                </div>
+                <div class="hero-point">
+                  <strong>Accountancy</strong>
+                  <span>Professional support for individuals and businesses.</span>
+                </div>
+                <div class="hero-point">
+                  <strong>London Based</strong>
+                  <span>Located at 2 Katherine Road, E6 1PB.</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="hero-side">
+              <div class="hero-logo-card">
+                <img src="logo.png" alt="G&C Welfare and Accountancy Services logo" />
+              </div>
+
+              <div class="hero-info-card">
+                <h3>Friendly and professional communication</h3>
+                <p>
+                  Clear support for documents, enquiries, forms and consultations,
+                  with direct contact options by phone, email and WhatsApp.
+                </p>
+              </div>
+
+              <div class="hero-info-card">
+                <h3>Built for trust and clarity</h3>
+                <p>
+                  A strong professional image with simple content, clean layout and clear actions.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-bg">
+      <div class="container">
+        <div class="section-head">
+          <h2>About Our Company</h2>
+          <p>
+            We provide approachable and practical support, helping clients with welfare matters,
+            accountancy needs and important documentation through a structured and professional service experience.
+          </p>
+        </div>
+
+        <div class="panel">
+          <div class="panel-inner">
+            <div class="grid-3">
+              <article class="card">
+                <div class="icon">01</div>
+                <h3>Trusted Guidance</h3>
+                <p>Clear advice, direct communication and practical support for everyday client needs.</p>
+              </article>
+
+              <article class="card">
+                <div class="icon">02</div>
+                <h3>Professional Service</h3>
+                <p>A cleaner, more credible presentation that reflects a serious and reliable business.</p>
+              </article>
+
+              <article class="card">
+                <div class="icon">03</div>
+                <h3>Community Focused</h3>
+                <p>Support for individuals, families and businesses looking for accessible local assistance.</p>
+              </article>
+            </div>
+
+            <div class="trust-strip">
+              <div class="trust-item">Professional and approachable support</div>
+              <div class="trust-item">Multiple contact options available</div>
+              <div class="trust-item">London-based business presence</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section-bg">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our Services</h2>
+          <p>
+            Your core services are shown in a more elegant and easier-to-scan format,
+            so visitors immediately understand what the business offers.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <article class="card">
+            <div class="icon">A</div>
+            <h3>Welfare Advice</h3>
+            <p>Practical guidance and support for welfare-related matters with a client-focused approach.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">B</div>
+            <h3>Accountancy Services</h3>
+            <p>Professional accountancy support for individuals, self-employed clients and businesses.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">C</div>
+            <h3>Forms &amp; Documentation</h3>
+            <p>Help with preparing, organising and understanding official documents and forms.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">D</div>
+            <h3>Consultations</h3>
+            <p>Tailored consultations to help clients understand the next steps clearly and confidently.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="company">
+      <div class="container">
+        <div class="section-head">
+          <h2>Company Information</h2>
+          <p>
+            Important business details are displayed in a cleaner structure that improves confidence and readability.
+          </p>
+        </div>
+
+        <div class="panel">
+          <div class="panel-inner grid-2">
+            <div class="card">
+              <h3>Registered Details</h3>
+              <div class="details-list">
+                <div class="detail-row">
+                  <strong>Company name</strong>
+                  <span>G&amp;C Welfare And Accountancy Services Ltd</span>
+                </div>
+                <div class="detail-row">
+                  <strong>Address</strong>
+                  <span>2 Katherine Road, London E6 1PB, England</span>
+                </div>
+                <div class="detail-row">
+                  <strong>Phone</strong>
+                  <a href="tel:+447404907088">+44 7404 907088</a>
+                </div>
+                <div class="detail-row">
+                  <strong>Email</strong>
+                  <a href="mailto:office@gcwelfareadvice.co.uk">office@gcwelfareadvice.co.uk</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Why this version works better</h3>
+              <p>
+                The new design uses a stronger visual hierarchy, better spacing and a more credible business style.
+                The background imagery adds warmth and professionalism without reducing readability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="location">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our Location</h2>
+          <p>
+            A visible business address helps reassure visitors that the company is established, reachable and local.
+          </p>
+        </div>
+
+        <div class="location-box">
+          <iframe
+            src="https://www.google.com/maps?q=2%20Katherine%20Road%2C%20London%20E6%201PB&z=15&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Map - 2 Katherine Road, London E6 1PB, England"
+          ></iframe>
+          <div class="location-note">
+            <strong>G&amp;C Welfare And Accountancy Services Ltd</strong><br />
+            2 Katherine Road, London E6 1PB, England
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-bg">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact Us</h2>
+          <p>
+            Make it easy for visitors to get in touch quickly through phone, email or WhatsApp.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card contact-card">
+            <h3>Contact Details</h3>
+            <div class="details-list">
+              <div class="detail-row">
+                <strong>Phone</strong>
+                <a href="tel:+447404907088">+44 7404 907088</a>
+              </div>
+              <div class="detail-row">
+                <strong>Email</strong>
+                <a href="mailto:office@gcwelfareadvice.co.uk">office@gcwelfareadvice.co.uk</a>
+              </div>
+              <div class="detail-row">
+                <strong>Address</strong>
+                <span>2 Katherine Road, London E6 1PB, England</span>
+              </div>
+            </div>
+
+            <div class="hero-actions" style="margin-top: 18px; margin-bottom: 0;">
+              <a href="https://wa.me/447404907088" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
+              <a href="mailto:office@gcwelfareadvice.co.uk" class="btn btn-primary">Email Us</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Quick Enquiry</h3>
+            <form id="enquiryForm">
+              <div>
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" placeholder="Your full name" required />
+              </div>
+
+              <div>
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="your@email.com" required />
+              </div>
+
+              <div>
+                <label for="message">How can we help?</label>
+                <textarea id="message" name="message" placeholder="Write your enquiry here" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Send enquiry</button>
+              <p class="note">This form opens your email app with the details pre-filled.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-box">
+        <div>© <span id="year"></span> G&amp;C Welfare And Accountancy Services Ltd. All rights reserved.</div>
+        <div>Welfare advice · Accountancy services · Documentation support</div>
+      </div>
+    </div>
+  </footer>
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/447404907088"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+  >
+    <span>WhatsApp</span>
+  </a>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-links');
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('enquiryForm');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Website enquiry from ' + name);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n\n' +
+        'Message:\n' + message
+      );
+
+      window.location.href =
+        'mailto:office@gcwelfareadvice.co.uk?subject=' + subject + '&body=' + body;
+    });
+  </script>
+</body>
+</html>
